@@ -1,0 +1,167 @@
+@keyframes breathing {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1); 
+    }
+}
+
+@keyframes planetMovement {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px); 
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.navbar-icon-left {
+    margin-right: 8px;
+    font-size: 24px; 
+    animation: planetMovement 3s ease-in-out infinite;
+    color: #CFA2E0; 
+}
+
+.navbar-title {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .navbar-icon-left {
+    margin-right: 8px; 
+    font-size: 24px; 
+  }
+
+  .navbar-icon {
+    width: 50px;
+    height: 50px; 
+    border-radius: 50%; 
+    background-color: #CFA2E0; 
+    position: fixed; 
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer; 
+    z-index: 1000; 
+    animation: breathing 2s ease-in-out infinite; 
+}
+
+.navbar-icon.active {
+    transform: scale(1.5); 
+}
+
+.navbar {
+    background-color: #160025;
+    padding: 10px 0;
+    margin-top: 10px;
+    position: fixed; 
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+}
+
+.navbar:hover {
+    background-color: #160025;
+}
+
+.navbar ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.navbar li {
+    text-align: center; 
+}
+
+.navbar a {
+    margin-top: 5px;
+    font-family: 'Lexend';
+    font-size: 16px;
+    color: white; 
+    text-decoration: none; 
+    display: block; 
+    padding: 10px 20px; 
+    transition: color 0.3s;
+    z-index: 1000; 
+}
+
+.navbar a:hover {
+    color: #CFA2E0; 
+}
+
+.navbar a:active {
+    color: #CFA2E0;
+}
+
+/* ------------------------------------------------------------- */
+/* ---------------------- Para tablets ---------------------- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar {
+        top: 60px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+}
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */
+/* ---------------------- Para Celulares ---------------------- */
+@media screen and (max-width: 767px) {
+    .navbar-icon {
+        width: 50px;
+        height: 50px; 
+        border-radius: 5px; 
+        top: 15px;
+        animation: breathing 2s ease-in-out infinite; 
+    }
+
+    .navbar {
+        top: 55px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .navbar-title {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        font-family: 'Lexend', sans-serif;
+        font-size: 13px;
+        color: white;
+      }
+}
+/* ------------------------------------------------------------- */
+/* ------------------------------------------------------------- */

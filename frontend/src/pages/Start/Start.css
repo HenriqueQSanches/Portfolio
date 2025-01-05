@@ -1,0 +1,103 @@
+  @keyframes blink-animation {
+    0% {
+      opacity: 1; 
+    }
+    50% {
+      opacity: 0; 
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg); 
+    }
+  }
+
+  .linkedinIcon, .whatsappIcon, .curriculumIcon, .githubIcon, .reactIcon {
+    color: #CFA2E0;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease; 
+  }
+  
+  .linkedinIcon:hover, .whatsappIcon:hover, .curriculumIcon:hover, .githubIcon:hover {
+    color: #ffff; 
+    transform: scale(1.2);
+  }
+  
+  .whatsappIcon {
+    margin-left: 20px;
+  }
+  
+  .curriculumIcon {
+    margin-left: 20px;
+  }
+
+  .githubIcon {
+    margin-left: 20px;
+  }
+
+  .reactIcon {
+    margin-left: 10px;
+    cursor: default;
+    animation: spin 15s linear infinite;
+  }
+  
+
+.socialMedia {
+  display: flex;
+}
+
+.MeContate {
+  color: #CFA2E0;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.start-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 35px;
+    color: white;
+  }
+
+  hr {
+    width: 90%;      
+    background-color: #CFA2E0; 
+    margin: 20px 0;       
+  }
+
+  .start-container h1 {
+    font-size: 36px; 
+    color: white; 
+  }
+  
+  .start-container .highlight {
+    color: #CFA2E0; 
+  }
+  
+  .start-container .highlight-white {
+    color: white; 
+  }
+  
+  .start-container p {
+    font-size: 18px; 
+    color: white;
+    margin: 10px 0; 
+  }
+  
+  .blink {
+    display: inline-block;
+    animation: blink-animation 1s steps(1, end) infinite; 
+  }
+
+  
+  

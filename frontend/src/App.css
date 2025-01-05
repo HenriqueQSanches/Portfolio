@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #160025;
+    font-family: 'Lexend';
+    color: white;
+}   
+
+html {
+    scroll-behavior: smooth;
+}
+  
+/* ---- FONTES UTILIZADAS ----- */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+/*------------------------------*/
+/* FONTES QUE SERÃO UTILIZADAS: */
+/*            Lexend            */
+/*                              */
+/*                              */
+/*------------------------------*/

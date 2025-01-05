@@ -1,0 +1,85 @@
+.tech-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+.highlight {
+    color: #CFA2E0; 
+    font-weight: bold; 
+}
+
+.highlight-white {
+    color: #fff;
+}
+
+.techinfoTitle {
+    margin-top: 50px;
+}
+
+hr {
+    width: 60%;
+}
+
+p {
+    margin-top: 5px;
+}
+
+/* Style dos Icones de Tecnologia */
+
+.tech-categories-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.tech-category-container {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background: rgba(31, 31, 31, 0.5);
+    border-radius: 8px;
+}
+
+.category-title {
+    color: #CFA2E0;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.techSmart {
+    display: flex;     
+    flex-wrap: wrap;      
+    justify-content: center; 
+    gap: 20px;               
+}
+
+.techSmart > * {
+    font-size: 50px;      
+    margin: 5px;      
+    color: #CFA2E0;   
+    transition: transform 0.3s ease, color 0.3s ease; 
+    cursor: pointer;
+}
+
+.techSmart > *:hover {
+    color: #ffff; 
+    transform: scale(1.2);
+}
+
+body:has(.tech-container) {
+    overflow: hidden;
+}
