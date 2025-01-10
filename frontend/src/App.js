@@ -19,10 +19,10 @@ function App() {
               element={
                 <motion.div
                   key="start"
-                  initial={{ y: '50%', opacity: 0 }} 
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: '50%', opacity: 0 }} 
-                  transition={{ type: 'spring', stiffness: 300 }} 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
                 >
                   <Start />
                 </motion.div>
@@ -33,10 +33,10 @@ function App() {
               element={
                 <motion.div
                   key="about"
-                  initial={{ y: '50%', opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }} 
-                  exit={{ y: '50%', opacity: 0 }} 
-                  transition={{ type: 'spring', stiffness: 300 }} 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
                 >
                   <About />
                 </motion.div>
@@ -47,10 +47,10 @@ function App() {
               element={
                 <motion.div
                   key="tech"
-                  initial={{ y: '50%', opacity: 0 }} 
-                  animate={{ y: 0, opacity: 1 }} 
-                  exit={{ y: '50%', opacity: 0 }} 
-                  transition={{ type: 'spring', stiffness: 300 }} 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
                 >
                   <Techinfo />
                 </motion.div>
