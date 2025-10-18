@@ -1,16 +1,3 @@
-@keyframes breathing {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1); 
-    }
-}
 
 @keyframes planetMovement {
     0% {
@@ -21,6 +8,30 @@
     }
     100% {
       transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 20px rgba(207, 162, 224, 0.4),
+            0 0 40px rgba(207, 162, 224, 0.2),
+            inset 0 0 20px rgba(207, 162, 224, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 0 30px rgba(207, 162, 224, 0.6),
+            0 0 60px rgba(207, 162, 224, 0.3),
+            inset 0 0 30px rgba(207, 162, 224, 0.2);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
     }
 }
 
@@ -48,37 +59,108 @@
   }
 
   .navbar-icon {
-    width: 50px;
-    height: 50px; 
-    border-radius: 50%; 
-    background-color: #CFA2E0; 
-    position: fixed; 
-    top: 20px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    cursor: pointer; 
-    z-index: 1000; 
-    animation: breathing 2s ease-in-out infinite; 
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle, #CFA2E0 0%, #8B4FA8 40%, #160025 80%);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 
+        0 0 20px rgba(207, 162, 224, 0.4),
+        0 0 40px rgba(207, 162, 224, 0.2),
+        inset 0 0 20px rgba(207, 162, 224, 0.1);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation: pulseGlow 3s ease-in-out infinite;
+    border: 1px solid rgba(207, 162, 224, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.navbar-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, transparent 30%, rgba(207, 162, 224, 0.1) 70%);
+    animation: rotate 20s linear infinite;
+    pointer-events: none;
+}
+
+.navbar-icon::before {
+    content: 'MENU';
+    font-family: 'Lexend';
+    font-size: 9px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(207, 162, 224, 0.8);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.navbar-icon:hover {
+    transform: translateX(-50%) scale(1.15);
+    box-shadow: 
+        0 0 40px rgba(207, 162, 224, 0.6),
+        0 0 80px rgba(207, 162, 224, 0.3),
+        inset 0 0 30px rgba(207, 162, 224, 0.2);
+    filter: brightness(1.2);
 }
 
 .navbar-icon.active {
-    transform: scale(1.5); 
+    transform: translateX(-50%) scale(1.1) rotate(180deg);
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle, #160025 0%, #8B4FA8 40%, #CFA2E0 80%);
+    box-shadow: 
+        0 0 30px rgba(207, 162, 224, 0.8),
+        0 0 60px rgba(207, 162, 224, 0.4),
+        inset 0 0 40px rgba(22, 0, 37, 0.5);
+}
+
+.navbar-icon.active::before {
+    content: '✕';
+    font-size: 20px;
+    letter-spacing: 0;
+    font-weight: 300;
 }
 
 .navbar {
-    background-color: #160025;
+    background: linear-gradient(135deg, rgba(22, 0, 37, 0.95) 0%, rgba(139, 79, 168, 0.95) 100%);
+    backdrop-filter: blur(10px);
     padding: 10px 0;
     margin-top: 10px;
     position: fixed; 
-    top: 70px;
+    top: 90px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; 
+    border-radius: 15px;
+    box-shadow: 
+        0 8px 32px rgba(207, 162, 224, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    border: 1px solid rgba(207, 162, 224, 0.2);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 .navbar:hover {
@@ -99,16 +181,36 @@
     margin-top: 5px;
     font-family: 'Lexend';
     font-size: 16px;
+    font-weight: 500;
     color: white; 
     text-decoration: none; 
     display: block; 
-    padding: 10px 20px; 
-    transition: color 0.3s;
-    z-index: 1000; 
+    padding: 12px 30px; 
+    transition: all 0.3s ease;
+    z-index: 1000;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(207, 162, 224, 0.2), transparent);
+    transition: width 0.4s ease;
+}
+
+.navbar a:hover::before {
+    width: 100%;
 }
 
 .navbar a:hover {
-    color: #CFA2E0; 
+    color: #CFA2E0;
+    text-shadow: 0 0 10px rgba(207, 162, 224, 0.5);
+    transform: translateX(5px);
 }
 
 .navbar a:active {
@@ -136,11 +238,21 @@
 /* ---------------------- Para Celulares ---------------------- */
 @media screen and (max-width: 767px) {
     .navbar-icon {
-        width: 50px;
-        height: 50px; 
-        border-radius: 5px; 
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: 
+            radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle, #CFA2E0 0%, #8B4FA8 40%, #160025 80%);
         top: 15px;
-        animation: breathing 2s ease-in-out infinite; 
+        box-shadow: 
+            0 0 20px rgba(207, 162, 224, 0.4),
+            0 0 40px rgba(207, 162, 224, 0.2),
+            inset 0 0 20px rgba(207, 162, 224, 0.1);
+    }
+    
+    .navbar-icon::before {
+        font-size: 8px;
     }
 
     .navbar {
