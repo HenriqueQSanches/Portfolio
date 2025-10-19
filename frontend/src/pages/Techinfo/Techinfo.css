@@ -5,7 +5,7 @@
     text-align: center;
     padding: 50px 20px;
     color: white;
-    margin-top: 20px;
+    margin-top: 80px;
     max-width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -24,14 +24,17 @@
 .techinfoTitle {
     font-size: 36px;
     margin-bottom: 20px;
+    margin-top: 20px;
+    text-shadow: 0 0 30px rgba(207, 162, 224, 0.4);
 }
 
 hr {
     width: 80%;
     height: 3px;
-    background-color: #CFA2E0;
+    background: linear-gradient(90deg, transparent, #CFA2E0, transparent);
     border: none;
     margin: 20px auto;
+    box-shadow: 0 0 10px rgba(207, 162, 224, 0.5);
 }
 
 p {
@@ -57,10 +60,22 @@ p {
     max-width: 350px;
     margin: 10px;
     padding: 20px;
-    background: rgba(31, 31, 31, 0.5);
-    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(31, 31, 31, 0.6) 0%, rgba(207, 162, 224, 0.1) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
     line-height: 1.6;
     box-sizing: border-box;
+    border: 1px solid rgba(207, 162, 224, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tech-category-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 12px 40px rgba(207, 162, 224, 0.2),
+        0 0 20px rgba(207, 162, 224, 0.1);
+    border-color: rgba(207, 162, 224, 0.4);
 }
 
 .category-title {
@@ -68,6 +83,8 @@ p {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
+    text-shadow: 0 0 20px rgba(207, 162, 224, 0.5);
+    font-weight: 600;
 }
 
 .techSmart {
@@ -90,6 +107,7 @@ p {
 .techSmart > *:hover {
     color: #ffff; 
     transform: scale(1.2);
+    filter: drop-shadow(0 0 10px rgba(207, 162, 224, 0.8));
 }
 
 body:has(.tech-container) {
