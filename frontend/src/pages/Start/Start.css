@@ -22,12 +22,14 @@
   .linkedinIcon, .whatsappIcon, .curriculumIcon, .githubIcon, .reactIcon {
     color: #CFA2E0;
     cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease; 
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(207, 162, 224, 0.3));
   }
   
   .linkedinIcon:hover, .whatsappIcon:hover, .curriculumIcon:hover, .githubIcon:hover {
     color: #ffff; 
-    transform: scale(1.2);
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 15px rgba(207, 162, 224, 0.8));
   }
   
   .whatsappIcon {
@@ -51,12 +53,20 @@
 
 .socialMedia {
   display: flex;
+  padding: 15px;
+  background: rgba(207, 162, 224, 0.05);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(207, 162, 224, 0.1);
+  margin-top: 10px;
 }
 
 .MeContate {
   color: #CFA2E0;
   font-size: 20px;
   margin-bottom: 8px;
+  text-shadow: 0 0 15px rgba(207, 162, 224, 0.5);
+  font-weight: 600;
 }
 
 .start-container {
@@ -65,19 +75,24 @@
     align-items: center;
     text-align: center;
     padding: 50px 20px;
-    margin-top: 35px;
+    margin-top: 80px;
     color: white;
   }
 
   hr {
-    width: 90%;      
-    background-color: #CFA2E0; 
-    margin: 20px 0;       
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #CFA2E0, transparent);
+    border: none;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(207, 162, 224, 0.5);
   }
 
   .start-container h1 {
     font-size: 36px; 
-    color: white; 
+    color: white;
+    text-shadow: 0 0 30px rgba(207, 162, 224, 0.3);
+    margin-top: 20px;
   }
   
   .start-container .highlight {
