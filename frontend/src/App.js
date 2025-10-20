@@ -7,6 +7,7 @@ import About from './pages/About/About';
 import Techinfo from './pages/Techinfo/Techinfo';
 import Awards from './pages/Awards/Awards';
 import Projects from './pages/Projects/Projects';
+import Services from './pages/Services/Services';
 import './App.css';
 
 function App() {
@@ -83,6 +84,20 @@ function App() {
                   transition={{ duration: 0.3 }}
                 >
                   <Projects />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/services"
+              element={
+                <motion.div
+                  key="services"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Services />
                 </motion.div>
               }
             />
