@@ -60,21 +60,18 @@ p {
     max-width: 350px;
     margin: 10px;
     padding: 20px;
-    background: linear-gradient(135deg, rgba(31, 31, 31, 0.6) 0%, rgba(207, 162, 224, 0.1) 100%);
-    backdrop-filter: blur(10px);
+    background: rgba(31, 31, 31, 0.85);
     border-radius: 15px;
     line-height: 1.6;
     box-sizing: border-box;
     border: 1px solid rgba(207, 162, 224, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .tech-category-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 12px 40px rgba(207, 162, 224, 0.2),
-        0 0 20px rgba(207, 162, 224, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(207, 162, 224, 0.25);
     border-color: rgba(207, 162, 224, 0.4);
 }
 
@@ -83,7 +80,6 @@ p {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
-    text-shadow: 0 0 20px rgba(207, 162, 224, 0.5);
     font-weight: 600;
 }
 
@@ -100,14 +96,13 @@ p {
     font-size: 50px;      
     margin: 5px;      
     color: #CFA2E0;   
-    transition: transform 0.3s ease, color 0.3s ease; 
+    transition: transform 0.2s ease, color 0.2s ease; 
     cursor: pointer;
 }
 
 .techSmart > *:hover {
     color: #ffff; 
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 10px rgba(207, 162, 224, 0.8));
+    transform: scale(1.1);
 }
 
 body:has(.tech-container) {

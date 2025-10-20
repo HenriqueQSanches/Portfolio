@@ -42,44 +42,20 @@
 
   /* Card Individual */
   .about-card {
-    background: linear-gradient(135deg, rgba(31, 31, 31, 0.6) 0%, rgba(207, 162, 224, 0.1) 100%);
-    backdrop-filter: blur(10px);
+    background: rgba(31, 31, 31, 0.85);
     border-radius: 20px;
     padding: 30px;
     border: 1px solid rgba(207, 162, 224, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                border-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     position: relative;
     overflow: hidden;
-    will-change: transform;
-    transform: translateZ(0);
-  }
-
-  .about-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #CFA2E0, #9d6fb8);
-    transform: scaleX(0) translateZ(0);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
   }
 
   .about-card:hover {
-    transform: translateY(-8px) translateZ(0);
-    box-shadow: 
-      0 15px 45px rgba(207, 162, 224, 0.3),
-      0 0 30px rgba(207, 162, 224, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(207, 162, 224, 0.3);
     border-color: rgba(207, 162, 224, 0.5);
-  }
-
-  .about-card:hover::before {
-    transform: scaleX(1) translateZ(0);
   }
 
   /* Ícone do Card */
@@ -90,24 +66,19 @@
     width: 70px;
     height: 70px;
     margin: 0 auto 20px;
-    background: linear-gradient(135deg, rgba(207, 162, 224, 0.2), rgba(207, 162, 224, 0.05));
+    background: rgba(207, 162, 224, 0.15);
     border-radius: 50%;
     border: 2px solid rgba(207, 162, 224, 0.3);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
-    transform: translateZ(0);
+    transition: transform 0.2s ease;
   }
 
   .about-card:hover .card-icon-wrapper {
-    transform: scale(1.08) rotate(5deg) translateZ(0);
-    box-shadow: 0 0 20px rgba(207, 162, 224, 0.4);
+    transform: scale(1.05);
   }
 
   .card-icon {
     font-size: 35px;
     color: #CFA2E0;
-    filter: drop-shadow(0 0 10px rgba(207, 162, 224, 0.5));
   }
 
   /* Título do Card */
