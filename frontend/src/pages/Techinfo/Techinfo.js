@@ -9,15 +9,22 @@ import { FaCss3Alt } from "react-icons/fa6";
 import { FaPhp } from "react-icons/fa";
 import { FaLaravel } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
-import { SiDjango } from "react-icons/si";
 import { SiSelenium } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { RiReactjsFill } from "react-icons/ri";
 import { FaVuejs } from "react-icons/fa";
-import { FaUbuntu } from "react-icons/fa";
 import { FaGitlab } from "react-icons/fa6";
 import { SiJira } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
+import { SiPostgresql } from "react-icons/si";
+import { SiBootstrap } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { SiNestjs } from "react-icons/si";
+import { FaDatabase } from "react-icons/fa";
 
 const Techinfo = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,80 +45,122 @@ const Techinfo = () => {
     };
 
     const techData = {
+        // Frontend
         html: { 
             title: "HTML5", 
             description: "Linguagem de marcação para construção de páginas web.", 
-            experience: "Estruturação de páginas com HTML5, criação de formulários, validação básica de entradas, incorporação de mídia (imagens e vídeos), e boas práticas de SEO e acessibilidade." 
+            experience: "Estruturação semântica de páginas web, criação de formulários complexos, validação de entradas, incorporação de mídia, e implementação de boas práticas de SEO e acessibilidade para garantir experiências inclusivas." 
         },
         css: { 
             title: "CSS3", 
             description: "Folhas de estilo em cascata para estilização de páginas web.", 
-            experience: "Criação de layouts responsivos com Flexbox e Grid, estilização de elementos com propriedades básicas e avançadas, uso de transições e animações, e boas práticas de organização de código CSS. Familiaridade com media queries e design adaptativo." 
+            experience: "Criação de layouts responsivos com Flexbox e Grid, animações e transições, design adaptativo com media queries, e organização de código CSS seguindo metodologias como BEM. Experiência em criar interfaces modernas e acessíveis." 
         },
         javascript: { 
-            title: "JavaScript", 
-            description: "Linguagem de programação para desenvolvimento web e muito mais.", 
-            experience: "Manipulação do DOM para criação de interatividade, uso de funções e estruturas de controle (loops, condicionais), manipulação de arrays e objetos com métodos nativos, consumo de APIs com `fetch` e tratamento de dados assíncronos com Promises e `async/await`. Conhecimento básico de ES6, como arrow functions, destructuring, e spread operator." 
+            title: "JavaScript (ES6+)", 
+            description: "Linguagem de programação essencial para desenvolvimento web moderno.", 
+            experience: "Desenvolvimento com JavaScript moderno (ES6+), manipulação do DOM, programação assíncrona com Promises e async/await, consumo de APIs RESTful, e implementação de lógica complexa no frontend. Uso de arrow functions, destructuring, spread operator e módulos ES6." 
+        },
+        typescript: { 
+            title: "TypeScript", 
+            description: "Superset do JavaScript que adiciona tipagem estática.", 
+            experience: "Desenvolvimento de aplicações robustas com TypeScript, criação de interfaces e types, uso de generics, e implementação de código type-safe. Experiência em migração de projetos JavaScript para TypeScript e configuração de ambientes de desenvolvimento." 
         },
         react: { 
             title: "React", 
             description: "Biblioteca JavaScript para construção de interfaces de usuário.", 
-            experience: "Criação de componentes reutilizáveis, gerenciamento de estado com hooks, uso de React Router para navegação, e integração com APIs RESTful. Conhecimento de conceitos como props, state, e ciclo de vida de componentes." 
+            experience: "Desenvolvimento de aplicações web complexas com React, criação de componentes reutilizáveis, gerenciamento de estado com hooks (useState, useEffect, useContext), React Router para navegação, e integração com APIs RESTful. Experiência em otimização de performance e boas práticas." 
+        },
+        nextjs: { 
+            title: "Next.js", 
+            description: "Framework React para aplicações web com renderização server-side.", 
+            experience: "Desenvolvimento de aplicações com Next.js, implementação de SSR (Server-Side Rendering) e SSG (Static Site Generation), otimização de SEO, roteamento dinâmico, e API routes. Experiência em deploy e otimização de performance." 
         },
         vuejs: { 
             title: "Vue.js", 
             description: "Framework JavaScript progressivo para construir interfaces de usuário.", 
-            experience: "Criação de componentes reutilizáveis, gerenciamento de estado com Vuex, uso de Vue Router para navegação, e integração com APIs RESTful. Conhecimento de diretivas, mixins, e ciclo de vida de componentes." 
+            experience: "Criação de aplicações com Vue.js, desenvolvimento de componentes reutilizáveis, gerenciamento de estado com Vuex, Vue Router para navegação, e integração com APIs. Conhecimento de composition API e options API." 
+        },
+        bootstrap: { 
+            title: "Bootstrap", 
+            description: "Framework CSS para desenvolvimento de interfaces responsivas.", 
+            experience: "Desenvolvimento de interfaces responsivas com Bootstrap, customização de componentes, uso do sistema de grid, e criação de layouts modernos e mobile-first. Experiência em integração com projetos React e Vue." 
+        },
+        tailwind: { 
+            title: "Tailwind CSS", 
+            description: "Framework CSS utility-first para desenvolvimento rápido.", 
+            experience: "Criação de interfaces modernas com Tailwind CSS, customização de temas, uso de utility classes, e otimização de builds. Experiência em configuração avançada e criação de design systems consistentes." 
+        },
+        
+        // Backend
+        nodejs: { 
+            title: "Node.js", 
+            description: "Runtime JavaScript para desenvolvimento backend.", 
+            experience: "Desenvolvimento de aplicações backend com Node.js, criação de APIs RESTful, manipulação de arquivos, processamento assíncrono, e integração com bancos de dados. Experiência em arquitetura de microsserviços e otimização de performance." 
+        },
+        express: { 
+            title: "Express.js", 
+            description: "Framework minimalista para Node.js.", 
+            experience: "Criação de APIs RESTful com Express, implementação de middlewares, autenticação JWT, validação de dados, tratamento de erros, e documentação de APIs. Experiência em arquitetura MVC e boas práticas de segurança." 
+        },
+        nestjs: { 
+            title: "NestJS", 
+            description: "Framework Node.js progressivo para aplicações escaláveis.", 
+            experience: "Desenvolvimento de aplicações enterprise com NestJS, uso de decorators, injeção de dependências, criação de módulos, controllers e services. Experiência em implementação de arquitetura limpa e princípios SOLID." 
         },
         php: { 
             title: "PHP", 
-            description: "Linguagem de programação para desenvolvimento web do lado do servidor.", 
-            experience: "Desenvolvimento de aplicações web com PHP, manipulação de banco de dados com MySQL, criação de APIs RESTful, e uso de frameworks como Laravel. Conhecimento de conceitos como sessões, cookies, e segurança web." 
-        },
-        python: { 
-            title: "Python", 
-            description: "Linguagem de programação de propósito geral, fácil de aprender e poderosa.", 
-            experience: "Desenvolvimento de scripts para automação, manipulação de dados com bibliotecas como Pandas, criação de APIs com Flask e Django, e uso de bibliotecas para machine learning como Scikit-learn. Conhecimento de conceitos como listas, dicionários, e compreensão de listas." 
-        },
-        java: { 
-            title: "Java", 
-            description: "Linguagem de programação popular para desenvolvimento de aplicações empresariais.", 
-            experience: "Desenvolvimento de aplicações básicas com Java, uso de bibliotecas padrão, manipulação de arquivos, e criação de interfaces gráficas simples com Swing. Conhecimento de conceitos de orientação a objetos como herança, polimorfismo, e encapsulamento." 
+            description: "Linguagem de programação para desenvolvimento web server-side.", 
+            experience: "Desenvolvimento de aplicações web com PHP, criação de APIs RESTful, manipulação de sessões e cookies, integração com bancos de dados MySQL e PostgreSQL, e implementação de segurança web. Experiência com POO e padrões de design." 
         },
         laravel: { 
             title: "Laravel", 
-            description: "Framework PHP para desenvolvimento ágil de aplicações web.", 
-            experience: "Criação de aplicações web com Laravel, uso de Eloquent ORM para manipulação de banco de dados, desenvolvimento de rotas e controladores, e implementação de autenticação básica. Conhecimento de Blade templates e migrações de banco de dados." 
+            description: "Framework PHP moderno para desenvolvimento web ágil.", 
+            experience: "Desenvolvimento de sistemas completos com Laravel, uso de Eloquent ORM, criação de APIs RESTful, implementação de autenticação e autorização, migrations, seeders, e jobs. Experiência em arquitetura MVC, service providers e boas práticas." 
         },
-        django: { 
-            title: "Django", 
-            description: "Framework web Python para construção de aplicações robustas.", 
-            experience: "Desenvolvimento de aplicações web com Django, uso de ORM para manipulação de banco de dados, criação de views e templates, e implementação de autenticação. Conhecimento de migrações de banco de dados e administração do Django." 
+        python: { 
+            title: "Python", 
+            description: "Linguagem versátil para desenvolvimento e automação.", 
+            experience: "Desenvolvimento de scripts para automação de processos, criação de APIs, web scraping com BeautifulSoup e Selenium, manipulação de dados, e integração com sistemas externos. Experiência em otimização de processos empresariais." 
         },
-        selenium: { 
-            title: "Selenium", 
-            description: "Ferramenta para automação de navegadores para testes.", 
-            experience: "Automação de testes de interface de usuário com Selenium, criação de scripts de teste para navegação e interação com páginas web, e uso de WebDriver para controle de navegadores. Conhecimento básico de XPath e seletores CSS para localização de elementos." 
-        },
+        
+        // Databases
         mysql: { 
             title: "MySQL", 
             description: "Sistema de gerenciamento de banco de dados relacional.", 
-            experience: "Criação e manipulação de bancos de dados MySQL, uso de SQL para consultas, inserções, atualizações e exclusões de dados, e implementação de relacionamentos entre tabelas. Conhecimento de índices, chaves primárias e estrangeiras, e backups de banco de dados." 
+            experience: "Modelagem e criação de bancos de dados MySQL, otimização de queries, implementação de índices, procedures e triggers, gerenciamento de relacionamentos complexos, e estratégias de backup. Experiência em normalização e performance tuning." 
         },
-        ubuntu: { 
-            title: "Ubuntu", 
-            description: "Sistema operacional Linux de código aberto baseado no Debian.", 
-            experience: "Uso de Ubuntu para desenvolvimento e administração de sistemas, instalação e configuração de software, uso de linha de comando para tarefas básicas, e gerenciamento de pacotes com APT. Conhecimento de permissões de arquivos e scripts de shell." 
+        postgresql: { 
+            title: "PostgreSQL", 
+            description: "Sistema de banco de dados relacional avançado e open-source.", 
+            experience: "Desenvolvimento com PostgreSQL, criação de schemas complexos, uso de tipos de dados avançados, implementação de constraints e triggers, otimização de queries, e gerenciamento de transações. Experiência em migrations e backup strategies." 
+        },
+        sqlserver: { 
+            title: "SQL Server", 
+            description: "Sistema de gerenciamento de banco de dados da Microsoft.", 
+            experience: "Conhecimento básico de SQL Server, criação de databases e tabelas, queries SQL, stored procedures, e manipulação de dados. Experiência em integração com aplicações .NET e ferramentas Microsoft." 
+        },
+        
+        // Tools & DevOps
+        github: { 
+            title: "GitHub", 
+            description: "Plataforma de hospedagem de código e colaboração.", 
+            experience: "Controle de versão com Git e GitHub, gerenciamento de branches, pull requests, code review, GitHub Actions para CI/CD, e colaboração em projetos open-source. Experiência em workflows Git Flow e boas práticas de versionamento." 
         },
         gitlab: { 
             title: "GitLab", 
-            description: "Plataforma DevOps para gerenciamento de repositórios Git.", 
-            experience: "Uso de GitLab para controle de versão, criação e gerenciamento de repositórios, uso de pipelines CI/CD para automação de testes e deploy, e colaboração em projetos com merge requests e revisão de código. Conhecimento de Git básico como commits, branches, e merges." 
+            description: "Plataforma DevOps completa para gerenciamento de código.", 
+            experience: "Uso de GitLab para controle de versão, criação de pipelines CI/CD, automação de testes e deploy, merge requests, e revisão de código. Experiência em configuração de runners e estratégias de deployment." 
         },
         jira: { 
             title: "Jira", 
-            description: "Ferramenta de gestão de projetos e controle de tarefas.", 
-            experience: "Uso de Jira para gerenciamento de projetos ágeis, criação e acompanhamento de tarefas, uso de boards Kanban e Scrum, e geração de relatórios de progresso. Conhecimento de workflows, sprints, e backlog grooming." 
+            description: "Ferramenta de gestão de projetos ágeis.", 
+            experience: "Gerenciamento de projetos com metodologias ágeis (Scrum/Kanban), criação e acompanhamento de sprints, estimativas, burndown charts, e workflows customizados. Experiência em coordenação de equipes e planejamento de releases." 
+        },
+        selenium: { 
+            title: "Selenium", 
+            description: "Ferramenta para automação de navegadores e testes.", 
+            experience: "Automação de processos web com Selenium, criação de scripts para testes automatizados, web scraping, e interação com páginas dinâmicas. Experiência em integração com Python e otimização de performance de scripts." 
         }
     };
 
@@ -131,8 +180,12 @@ const Techinfo = () => {
                         <TiHtml5 className="techHTML" onClick={() => handleTechClick(techData.html)} />
                         <FaCss3Alt className="techCSS" onClick={() => handleTechClick(techData.css)} />
                         <RiJavascriptFill className="techJavascript" onClick={() => handleTechClick(techData.javascript)} />
+                        <SiTypescript className="techTypescript" onClick={() => handleTechClick(techData.typescript)} />
                         <RiReactjsFill className="techReactJS" onClick={() => handleTechClick(techData.react)} />
+                        <SiNextdotjs className="techNextJS" onClick={() => handleTechClick(techData.nextjs)} />
                         <FaVuejs className="vueJS" onClick={() => handleTechClick(techData.vuejs)} />
+                        <SiBootstrap className="techBootstrap" onClick={() => handleTechClick(techData.bootstrap)} />
+                        <SiTailwindcss className="techTailwind" onClick={() => handleTechClick(techData.tailwind)} />
                     </div>
                 </div>
 
@@ -140,23 +193,33 @@ const Techinfo = () => {
                 <div className="tech-category-container">
                     <h2 className="category-title">Backend</h2>
                     <div className="techSmart">
+                        <FaNodeJs className="techNodeJS" onClick={() => handleTechClick(techData.nodejs)} />
+                        <SiExpress className="techExpress" onClick={() => handleTechClick(techData.express)} />
+                        <SiNestjs className="techNestJS" onClick={() => handleTechClick(techData.nestjs)} />
                         <FaPhp className="techPHP" onClick={() => handleTechClick(techData.php)} />
-                        <FaPython className="techPython" onClick={() => handleTechClick(techData.python)} />
-                        <FaJava className="techJava" onClick={() => handleTechClick(techData.java)} />
                         <FaLaravel className="techLaravel" onClick={() => handleTechClick(techData.laravel)} />
-                        <SiDjango className="techDjango" onClick={() => handleTechClick(techData.django)} />
+                        <FaPython className="techPython" onClick={() => handleTechClick(techData.python)} />
                     </div>
                 </div>
 
-                {/* Ferramentas */}
+                {/* Databases */}
                 <div className="tech-category-container">
-                    <h2 className="category-title">Ferramentas</h2>
+                    <h2 className="category-title">Databases</h2>
                     <div className="techSmart">
-                        <SiSelenium className="techSelenium" onClick={() => handleTechClick(techData.selenium)} />
                         <SiMysql className="techMySQL" onClick={() => handleTechClick(techData.mysql)} />
-                        <FaUbuntu className="techUbuntu" onClick={() => handleTechClick(techData.ubuntu)} />
+                        <SiPostgresql className="techPostgreSQL" onClick={() => handleTechClick(techData.postgresql)} />
+                        <FaDatabase className="techSQLServer" onClick={() => handleTechClick(techData.sqlserver)} />
+                    </div>
+                </div>
+
+                {/* Tools & DevOps */}
+                <div className="tech-category-container">
+                    <h2 className="category-title">Tools & DevOps</h2>
+                    <div className="techSmart">
+                        <FaGithub className="techGitHub" onClick={() => handleTechClick(techData.github)} />
                         <FaGitlab className="techGitLab" onClick={() => handleTechClick(techData.gitlab)} />
                         <SiJira className="techJira" onClick={() => handleTechClick(techData.jira)} />
+                        <SiSelenium className="techSelenium" onClick={() => handleTechClick(techData.selenium)} />
                     </div>
                 </div>
             </div>
