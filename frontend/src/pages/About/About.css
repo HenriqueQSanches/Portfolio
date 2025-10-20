@@ -99,9 +99,11 @@
     text-align: center;
   }
 
-  /* Card de Hobbies - Destaque especial */
+  /* Card de Hobbies - Destaque especial centralizado */
   .about-hobbies-card {
-    grid-column: span 1;
+    grid-column: 1 / -1;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   /* Responsividade para tablets */
@@ -110,6 +112,10 @@
       grid-template-columns: 1fr;
       gap: 20px;
       padding: 0 15px;
+    }
+
+    .about-hobbies-card {
+      max-width: 100%;
     }
 
     .about-card {
