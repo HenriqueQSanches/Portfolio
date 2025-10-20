@@ -47,12 +47,12 @@
 .project-card {
   background: rgba(31, 31, 31, 0.9);
   border-radius: 20px;
-  padding: 30px;
+  padding: 30px 30px 25px 30px;
   border: 2px solid rgba(207, 162, 224, 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
 }
@@ -107,7 +107,7 @@
 /* Conteúdo */
 .project-content {
   text-align: left;
-  flex-grow: 1;
+  flex: 1;
 }
 
 .project-category {
@@ -149,6 +149,7 @@
 
 /* Tecnologias */
 .project-tech {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
