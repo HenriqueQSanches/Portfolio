@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Start from './pages/Start/Start';
 import About from './pages/About/About';
 import Techinfo from './pages/Techinfo/Techinfo';
+import Awards from './pages/Awards/Awards';
 import './App.css';
 
 function App() {
@@ -53,6 +54,20 @@ function App() {
                   transition={{ duration: 0.3 }}
                 >
                   <Techinfo />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/awards"
+              element={
+                <motion.div
+                  key="awards"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Awards />
                 </motion.div>
               }
             />

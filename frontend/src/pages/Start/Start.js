@@ -20,7 +20,10 @@ const Start = () => {
         Olá, eu sou <span className="highlight">H</span><span className="highlight-white">en</span><span className="highlight">ri</span><span className="highlight-white">que Sanches!</span><FaReact className='reactIcon' size={40}/>
       </h1>
       <p>
-        Sou um Desenvolvedor Web Fullstack, apaixonado por tecnologia e inovação. Gosto de criar soluções que ajudem ou facilitem a vida das pessoas, além de aprimorar suas experiências digitais. Meu objetivo é aprender continuamente e melhorar minhas habilidades.
+        Desenvolvedor Fullstack com mais de 2 anos de experiência na criação e implementação de sistemas web para diversos segmentos de mercado. Especializado em <span className="highlight">React</span>, <span className="highlight">Node.js</span>, <span className="highlight">TypeScript</span>, <span className="highlight">PHP</span> e <span className="highlight">Laravel</span>, com foco em soluções completas que otimizam processos e melhoram indicadores de negócio.
+      </p>
+      <p>
+        Atuo no desenvolvimento de <span className="highlight">APIs RESTful</span>, automações e sistemas de gerenciamento, sempre comprometido com <span className="highlight">Clean Code</span>, <span className="highlight">SOLID</span> e boas práticas de desenvolvimento.
       </p>
       <p className="quote">
         "The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge" - <span className='highlight'>Stephen Hawking</span>
