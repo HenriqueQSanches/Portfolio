@@ -45,7 +45,7 @@ const Start = () => {
         </a>
 
         {/* Currículo */}
-        <a href="https://drive.google.com/file/d/1qYXXW6yezTrWkxaLVEKoH5GH8Ev7rmVy/view" target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/file/d/1UljvxjtsDT-VDyT3RofBwGEZn9YYG8E2/view?usp=sharing" target="_blank" rel="noopener noreferrer">
           <IoNewspaperSharp size={40} className='curriculumIcon' />
         </a>
 
