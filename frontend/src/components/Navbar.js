@@ -52,6 +52,7 @@ const Navbar = () => {
             <li><Link to="/tech" onClick={toggleNavbar}>TECNOLOGIAS</Link></li>
             <li><Link to="/awards" onClick={toggleNavbar}>RECONHECIMENTOS</Link></li>
             <li><Link to="/projects" onClick={toggleNavbar}>PROJETOS</Link></li>
+            <li><Link to="/services" onClick={toggleNavbar}>SERVIÇOS</Link></li>
           </ul>
         </nav>
       )}
