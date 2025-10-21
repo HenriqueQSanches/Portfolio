@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import { IoPlanetSharp } from "react-icons/io5";
+import { FaCode } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +37,12 @@ const Navbar = () => {
   return (
     <div ref={navbarRef}>
       <div className="navbar-title">
-        <IoPlanetSharp size={32} className="navbar-icon-left" /> 
-        <span>Dev. Henrique S.</span>
+        <div className="logo-wrapper">
+          <FaCode className="navbar-icon-left" />
+        </div>
+        <span className="logo-text">
+          <span className="logo-dev">Dev.</span> Henrique S.
+        </span>
       </div>
 
       <div className={`navbar-icon ${isOpen ? 'active' : ''}`} onClick={toggleNavbar}>
