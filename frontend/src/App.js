@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Start from './pages/Start/Start';
 import About from './pages/About/About';
 import Techinfo from './pages/Techinfo/Techinfo';
@@ -103,6 +104,7 @@ function App() {
             />
           </Routes>
         </AnimatePresence>
+        <Footer />
       </div>
     </Router>
   );

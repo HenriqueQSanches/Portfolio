@@ -15,7 +15,7 @@ const Projects = () => {
       title: "Sistema de Atendimento ao Cliente",
       category: "Sistema Web Fullstack",
       company: "Zely",
-      description: "Plataforma completa de atendimento integrada com WhatsApp, incluindo gestão de tickets, filas de atendimento, campanhas e automação de múltiplos canais. Sistema desenvolvido para alta disponibilidade e performance.",
+      description: "Plataforma de atendimento integrada com WhatsApp. Gestão de tickets, filas, campanhas e automação multicanal com alta disponibilidade.",
       technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "Redis"],
       results: [
         "Atendimento multicanal integrado",
@@ -30,7 +30,7 @@ const Projects = () => {
       icon: <FaRobot />,
       title: "Automação com OCR para Processamento Financeiro",
       category: "Automação Python",
-      description: "Sistema de automação com Python e OCR para leitura automática de códigos e códigos de barras, processamento de dados e geração de planilhas Excel. Otimizou drasticamente processos financeiros e administrativos.",
+      description: "Automação inteligente com OCR para leitura de códigos de barras, processamento de dados e geração automática de planilhas Excel.",
       technologies: ["Python", "OCR", "Excel", "Pandas"],
       results: [
         "Atende mais de 200 clientes",
@@ -45,7 +45,7 @@ const Projects = () => {
       icon: <FaCode />,
       title: "Migração de Sistema Legacy",
       category: "Modernização de Software",
-      description: "Migração completa de sistema Visual Studio FOX (C#) para aplicação web moderna em PHP/CodeIgniter seguindo padrão MVC. Implementação de testes automatizados, versionamento Git e documentação técnica completa.",
+      description: "Migração de sistema Visual Studio FOX (C#) para aplicação web PHP/CodeIgniter com padrão MVC, testes automatizados e versionamento Git.",
       technologies: ["PHP", "CodeIgniter", "MySQL", "Git", "MVC"],
       results: [
         "Sistema legado modernizado",
@@ -62,7 +62,7 @@ const Projects = () => {
       title: "Sistema de Gestão Financeira",
       category: "Sistema Web Fullstack",
       company: "cPortal",
-      description: "Plataforma completa de gerenciamento financeiro com arquitetura DAO, dashboards interativos para visualização de receitas, despesas e lucros. Interface moderna e intuitiva para análise financeira em tempo real.",
+      description: "Plataforma financeira com arquitetura DAO e dashboards interativos. Análise em tempo real de receitas, despesas e lucros.",
       technologies: ["PHP", "ReactJS", "MySQL", "DAO Pattern"],
       results: [
         "Dashboards interativos",
@@ -79,7 +79,7 @@ const Projects = () => {
       title: "Sistema para Clínica Oftalmológica",
       category: "Sistema de Gestão Médica",
       company: "cPortal",
-      description: "Plataforma de gerenciamento para clínica oftalmológica com VueJS e Laravel, otimizando processos de atendimento, agendamento de consultas e realização de exames. Integração completa com banco de dados.",
+      description: "Plataforma médica com VueJS e Laravel para gestão de atendimentos, agendamentos e exames oftalmológicos.",
       technologies: ["Vue.js", "Laravel", "MySQL", "PHP"],
       results: [
         "Otimização de atendimentos",
@@ -96,7 +96,7 @@ const Projects = () => {
       title: "Sistema de Validação para Evento Netflix",
       category: "Sistema Web Mobile",
       company: "cPortal",
-      description: "Aplicação web mobile de geração e validação de QR Code para evento da série Sintonia da Netflix. Sistema com autenticação Google, resultando em redução significativa de filas e melhor experiência do público.",
+      description: "App mobile de QR Code para evento da série Sintonia da Netflix. Validação instantânea com autenticação Google.",
       technologies: ["PHP Slim", "ReactJS", "Google API", "MySQL"],
       results: [
         "Redução drástica em filas",
@@ -113,7 +113,7 @@ const Projects = () => {
       title: "Sistema de Premiações para Eventos",
       category: "Sistema Web Fullstack",
       company: "cPortal",
-      description: "Plataforma de gerenciamento de premiações com múltiplas integrações de API. Sistema robusto e confiável para entrega eficiente de prêmios durante eventos de grande porte.",
+      description: "Plataforma de premiações com múltiplas integrações de API. Entrega eficiente e confiável para eventos de grande porte.",
       technologies: ["Laravel", "Node.js", "TypeScript", "MySQL"],
       results: [
         "Múltiplas integrações de API",
@@ -129,7 +129,7 @@ const Projects = () => {
       icon: <FaDatabase />,
       title: "Sistemas Standalone com SQLite",
       category: "Aplicações Desktop",
-      description: "Desenvolvimento de sistemas standalone com SQLite e geração de executáveis (.exe) para uso em ambiente local. Soluções práticas com alta taxa de adesão pelos usuários finais.",
+      description: "Aplicações desktop standalone com SQLite e executáveis (.exe) para uso local offline.",
       technologies: ["Python", "SQLite", "PyInstaller"],
       results: [
         "Soluções offline independentes",
