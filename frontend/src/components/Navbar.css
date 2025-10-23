@@ -284,7 +284,10 @@
         background: 
             radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
             radial-gradient(circle, #CFA2E0 0%, #8B4FA8 40%, #160025 80%);
-        top: 15px;
+        top: 20px;
+        left: auto;
+        right: 20px;
+        transform: none;
         box-shadow: 
             0 0 20px rgba(207, 162, 224, 0.4),
             0 0 40px rgba(207, 162, 224, 0.2),
@@ -295,8 +298,19 @@
         font-size: 8px;
     }
 
+    .navbar-icon:hover {
+        transform: scale(1.15);
+    }
+
+    .navbar-icon.active {
+        transform: scale(1.1) rotate(180deg);
+    }
+
     .navbar {
-        top: 65px;
+        top: 90px;
+        right: 20px;
+        left: auto;
+        transform: none;
     }
 
     .navbar a {
