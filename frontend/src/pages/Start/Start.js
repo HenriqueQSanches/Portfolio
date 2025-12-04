@@ -1,14 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Start.css';
 import { GrLinkedin } from "react-icons/gr";
 import { SiWhatsapp } from "react-icons/si";
 import { IoNewspaperSharp } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
+import NoticeModal from '../../components/NoticeModal';
 
 
 
 const Start = () => {
+  const [whatsOpen, setWhatsOpen] = useState(false);
+  const handleWhatsappClick = (e) => {
+    e.preventDefault();
+    setWhatsOpen(true);
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -40,7 +46,7 @@ const Start = () => {
         </a>
 
         {/* WhatsApp */}
-        <a href="https://wa.me/5511988078402?text=Te%20achei%20pelo%20seu%20portfolio%20feito%20em%20ReactJS" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/5511988078402?text=Te%20achei%20pelo%20seu%20portfolio%20feito%20em%20ReactJS" target="_blank" rel="noopener noreferrer" onClick={handleWhatsappClick}>
           <SiWhatsapp size={40} className='whatsappIcon' />
         </a>
 
@@ -54,6 +60,12 @@ const Start = () => {
           <FaGithub size={40} className='githubIcon'/>
         </a>
       </div>
+
+      <NoticeModal
+        open={whatsOpen}
+        onClose={() => setWhatsOpen(false)}
+        message="No momento, não estou fazendo uso do WhatsApp; por gentileza chamar via Linkedin ou pelo email: qiwitech.sanches@gmail.com"
+      />
     </div>
   );
 };

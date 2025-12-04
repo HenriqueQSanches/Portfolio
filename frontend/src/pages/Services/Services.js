@@ -1,9 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './Services.css';
 import { FaCode, FaMobileAlt, FaRobot, FaServer, FaDatabase, FaPaintBrush, FaTools, FaRocket, FaWhatsapp } from "react-icons/fa";
 import { MdIntegrationInstructions } from "react-icons/md";
+import NoticeModal from '../../components/NoticeModal';
 
 const Services = () => {
+  const [whatsOpen, setWhatsOpen] = useState(false);
+  const handleWhatsappClick = (e) => {
+    e.preventDefault();
+    setWhatsOpen(true);
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -196,6 +202,7 @@ const Services = () => {
                 rel="noopener noreferrer"
                 className="service-button"
                 style={{ backgroundColor: service.color }}
+                onClick={handleWhatsappClick}
               >
                 <FaWhatsapp size={20} />
                 Solicitar Orçamento
@@ -214,6 +221,7 @@ const Services = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="contact-btn whatsapp-btn"
+            onClick={handleWhatsappClick}
           >
             📱 WhatsApp
           </a>
@@ -229,6 +237,12 @@ const Services = () => {
       </div>
 
       <hr style={{ width: '80%', height: '3px', backgroundColor: '#CFA2E0', border: 'none', margin: '40px auto 20px' }} />
+
+      <NoticeModal
+        open={whatsOpen}
+        onClose={() => setWhatsOpen(false)}
+        message="No momento, não estou fazendo uso do WhatsApp; por gentileza chamar via Linkedin ou pelo email: qiwitech.sanches@gmail.com"
+      />
     </div>
   );
 };
