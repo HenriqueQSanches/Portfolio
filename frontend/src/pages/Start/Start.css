@@ -75,8 +75,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px 20px 60px;
-    margin-top: -40px;
+    padding: 30px 20px 60px;
+    margin-top: 60px;
     color: white;
     min-height: 100vh;
   }
@@ -127,4 +127,10 @@
   }
 
   
+/* Ajuste para telas muito largas: reduz levemente o espaçamento do topo */
+@media screen and (min-width: 1280px) {
+  .start-container {
+    margin-top: 50px;
+  }
+}
   
