@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 import { FaHeart, FaLinkedin, FaGithub, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import NoticeModal from './NoticeModal';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [whatsOpen, setWhatsOpen] = useState(false);
+  const handleWhatsappClick = (e) => {
+    e.preventDefault();
+    setWhatsOpen(true);
+  };
 
   return (
     <footer className="footer-container">
@@ -52,6 +58,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="social-link whatsapp"
             aria-label="WhatsApp"
+            onClick={handleWhatsappClick}
           >
             <FaWhatsapp />
           </a>
@@ -70,6 +77,12 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
+      <NoticeModal
+        open={whatsOpen}
+        onClose={() => setWhatsOpen(false)}
+        message="No momento, não estou fazendo uso do WhatsApp; por gentileza chamar via Linkedin ou pelo email: qiwitech.sanches@gmail.com"
+      />
     </footer>
   );
 };
