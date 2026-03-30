@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import './Services.css';
 import { FaCode, FaMobileAlt, FaRobot, FaServer, FaDatabase, FaPaintBrush, FaTools, FaRocket, FaWhatsapp } from "react-icons/fa";
 import { MdIntegrationInstructions } from "react-icons/md";
-import NoticeModal from '../../components/NoticeModal';
 
 const Services = () => {
-  const [whatsOpen, setWhatsOpen] = useState(false);
-  const handleWhatsappClick = (e) => {
-    e.preventDefault();
-    setWhatsOpen(true);
-  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -197,12 +191,11 @@ const Services = () => {
 
             <div className="service-action">
               <a 
-                href="https://wa.me/5511988078402?text=Olá!%20Gostaria%20de%20contratar%20seus%20serviços" 
+                href="https://wa.me/5511930022870?text=Olá!%20Gostaria%20de%20contratar%20seus%20serviços" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="service-button"
                 style={{ backgroundColor: service.color }}
-                onClick={handleWhatsappClick}
               >
                 <FaWhatsapp size={20} />
                 Solicitar Orçamento
@@ -217,11 +210,10 @@ const Services = () => {
         <p>Entre em contato para discutir como posso ajudar seu negócio a crescer com tecnologia</p>
         <div className="contact-buttons">
           <a 
-            href="https://wa.me/5511988078402?text=Olá!%20Gostaria%20de%20contratar%20seus%20serviços" 
+            href="https://wa.me/5511930022870?text=Olá!%20Gostaria%20de%20contratar%20seus%20serviços" 
             target="_blank" 
             rel="noopener noreferrer"
             className="contact-btn whatsapp-btn"
-            onClick={handleWhatsappClick}
           >
             📱 WhatsApp
           </a>
@@ -238,11 +230,6 @@ const Services = () => {
 
       <hr style={{ width: '80%', height: '3px', backgroundColor: '#CFA2E0', border: 'none', margin: '40px auto 20px' }} />
 
-      <NoticeModal
-        open={whatsOpen}
-        onClose={() => setWhatsOpen(false)}
-        message="No momento, não estou fazendo uso do WhatsApp; por gentileza chamar via Linkedin ou pelo email: qiwitech.sanches@gmail.com"
-      />
     </div>
   );
 };
