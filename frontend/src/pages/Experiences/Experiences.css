@@ -1,0 +1,190 @@
+.experiences-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 90px 20px 40px;
+  color: #fff;
+}
+
+.experiences-container h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 30px rgba(207, 162, 224, 0.4);
+}
+
+.experiences-icon {
+  color: #cfa2e0;
+}
+
+.experiences-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 26px;
+  max-width: 860px;
+}
+
+.highlight-blue {
+  color: #cfa2e0;
+}
+
+.highlights-grid {
+  width: min(1200px, 100%);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 14px;
+  margin: 12px 0 28px;
+}
+
+.highlight-card {
+  border: 1px solid rgba(207, 162, 224, 0.28);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.05), rgba(207, 162, 224, 0.08));
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.highlight-value {
+  color: #f3d7ff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.highlight-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.experiences-list {
+  width: min(1200px, 100%);
+  display: grid;
+  gap: 16px;
+}
+
+.experience-card {
+  text-align: left;
+  border: 1px solid rgba(207, 162, 224, 0.24);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(207, 162, 224, 0.06));
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 28px rgba(6, 1, 12, 0.32);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.experience-header h3 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.company-name {
+  color: #cfa2e0;
+  font-weight: 600;
+}
+
+.period-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(207, 162, 224, 0.1);
+  border: 1px solid rgba(207, 162, 224, 0.3);
+  color: #efd3ff;
+  font-size: 13px;
+}
+
+.experience-location {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 14px;
+}
+
+.experience-summary {
+  margin-top: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.impact-section,
+.stack-section {
+  margin-top: 16px;
+}
+
+.impact-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e7c5f7;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.impact-section ul {
+  margin-left: 16px;
+  display: grid;
+  gap: 7px;
+}
+
+.impact-section li {
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.6;
+}
+
+.stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stack-tags span {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(207, 162, 224, 0.34);
+  background: rgba(207, 162, 224, 0.08);
+  color: #f2dcff;
+}
+
+.recruiter-note {
+  width: min(1200px, 100%);
+  margin-top: 24px;
+  border-radius: 14px;
+  border: 1px solid rgba(207, 162, 224, 0.28);
+  background: rgba(207, 162, 224, 0.12);
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 768px) {
+  .experiences-container {
+    padding: 80px 14px 24px;
+  }
+
+  .experiences-container h1 {
+    font-size: 30px;
+  }
+
+  .experiences-subtitle {
+    font-size: 16px;
+  }
+
+  .experience-card {
+    padding: 18px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+  }
+}

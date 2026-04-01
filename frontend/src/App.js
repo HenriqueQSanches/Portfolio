@@ -9,6 +9,7 @@ import Techinfo from './pages/Techinfo/Techinfo';
 import Awards from './pages/Awards/Awards';
 import Projects from './pages/Projects/Projects';
 import Services from './pages/Services/Services';
+import Experiences from './pages/Experiences/Experiences';
 import './App.css';
 
 function App() {
@@ -57,6 +58,20 @@ function App() {
                   transition={{ duration: 0.3 }}
                 >
                   <Techinfo />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/experiences"
+              element={
+                <motion.div
+                  key="experiences"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Experiences />
                 </motion.div>
               }
             />
