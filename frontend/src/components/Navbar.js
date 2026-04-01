@@ -1,66 +1,74 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navbarRef = useRef(null);
-  const location = useLocation();
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleClickOutside = (event) => {
-    if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-      setIsOpen(false);
-    }
-  };
+  const navItems = [
+    { to: '/', label: 'Início' },
+    { to: '/about', label: 'Sobre' },
+    { to: '/tech', label: 'Tecnologias' },
+    { to: '/awards', label: 'Reconhecimentos' },
+    { to: '/projects', label: 'Projetos' },
+    { to: '/services', label: 'Serviços' }
+  ];
 
   useEffect(() => {
-    setIsOpen(false); 
-  }, [location]);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = 'auto';
     };
   }, [isOpen]);
 
   return (
-    <div ref={navbarRef}>
-      <div className="navbar-title">
-        <div className="logo-wrapper">
-          <FaCode className="navbar-icon-left" />
-        </div>
-        <span className="logo-text">
-          <span className="logo-dev">Dev.</span> Henrique S.
-        </span>
+    <header className="navbar-shell">
+      <div className="navbar-wrapper">
+        <NavLink to="/" className="brand" onClick={() => setIsOpen(false)}>
+          <span className="brand-icon">
+            <FaCode />
+          </span>
+          <span className="brand-text">
+            <span className="brand-dev">Dev.</span> Henrique S.
+          </span>
+        </NavLink>
+
+        <nav className="navbar-desktop">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <button
+          className="mobile-toggle"
+          type="button"
+          aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
 
-      <div className={`navbar-icon ${isOpen ? 'active' : ''}`} onClick={toggleNavbar}>
-        <div className="circle"></div>
+      <div className={`mobile-overlay ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)} />
+      <div className={`mobile-panel ${isOpen ? 'open' : ''}`}>
+        {navItems.map((item) => (
+          <NavLink
+            key={item.to}
+            to={item.to}
+            className={({ isActive }) => `mobile-link ${isActive ? 'active' : ''}`}
+            onClick={() => setIsOpen(false)}
+          >
+            {item.label}
+          </NavLink>
+        ))}
       </div>
-      {isOpen && (
-        <nav className="navbar">
-          <ul>
-            <li><Link to="/" onClick={toggleNavbar}>INICIO</Link></li>
-            <li><Link to="/about" onClick={toggleNavbar}>SOBRE</Link></li>
-            <li><Link to="/tech" onClick={toggleNavbar}>TECNOLOGIAS</Link></li>
-            <li><Link to="/awards" onClick={toggleNavbar}>RECONHECIMENTOS</Link></li>
-            <li><Link to="/projects" onClick={toggleNavbar}>PROJETOS</Link></li>
-            <li><Link to="/services" onClick={toggleNavbar}>SERVIÇOS</Link></li>
-          </ul>
-        </nav>
-      )}
-    </div>
+    </header>
   );
 };
 

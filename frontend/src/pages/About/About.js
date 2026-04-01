@@ -28,7 +28,7 @@ const About = () => {
           </div>
           <h3 className="card-title">Experiência Profissional</h3>
           <p className="card-text">
-            Desenvolvedor Fullstack com <span className="highlight">mais de 2 anos de experiência</span> na criação de soluções tecnológicas completas. Implementei sistemas de <span className="highlight">gerenciamento financeiro</span>, aplicações para <span className="highlight">clínicas</span>, <span className="highlight">automações de processos</span> e soluções que resultaram em otimização operacional.
+            Desenvolvedor Fullstack com <span className="highlight">mais de 3 anos de experiência</span> em sistemas web, plataformas <span className="highlight">SaaS</span> e <span className="highlight">automação</span> para diferentes segmentos. Já entreguei soluções de <span className="highlight">gestão financeira</span>, aplicações para <span className="highlight">clínicas</span>, plataformas de atendimento com <span className="highlight">WhatsApp</span>, automações administrativas e sistemas de validação para eventos — sempre com foco em resultado e operação estável.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ const About = () => {
           </div>
           <h3 className="card-title">Metodologias & Práticas</h3>
           <p className="card-text">
-            Trabalho com <span className="highlight">metodologias ágeis</span> e desenvolvimento orientado a testes, sempre comprometido com <span className="highlight">Clean Code</span> e <span className="highlight">SOLID</span>. Capacidade de trabalhar em projetos completos do conceito à implementação, garantindo soluções eficientes e escaláveis.
+            Trabalho com <span className="highlight">metodologias ágeis</span>, code reviews e boas práticas de engenharia, com <span className="highlight">Clean Code</span>, <span className="highlight">SOLID</span> e arquitetura <span className="highlight">MVC</span>. Costumo conduzir projetos do conceito e requisitos até deploy e manutenção, priorizando código escalável e fácil de evoluir.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ const About = () => {
           </div>
           <h3 className="card-title">Versatilidade Técnica</h3>
           <p className="card-text">
-            Versatilidade em adaptar-me a diferentes linguagens e ambientes, com foco em entender profundamente os problemas e identificar as melhores soluções, seja em <span className="highlight">Frontend</span>, <span className="highlight">Backend</span>, <span className="highlight">APIs RESTful</span> ou <span className="highlight">Automação</span>.
+            Stack principal alinhada ao mercado: <span className="highlight">TypeScript</span>, <span className="highlight">Node.js</span>, <span className="highlight">React</span>, <span className="highlight">PHP</span>, <span className="highlight">Laravel</span>, <span className="highlight">Python</span>, <span className="highlight">PostgreSQL</span>, <span className="highlight">MySQL</span> e <span className="highlight">APIs REST</span>. Versatilidade para atuar em <span className="highlight">frontend</span>, <span className="highlight">backend</span>, integrações e automação conforme a necessidade do produto.
           </p>
         </div>
 

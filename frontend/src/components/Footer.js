@@ -21,8 +21,8 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div className="footer-contact">
-          <a href="mailto:qiwitech.sanches@gmail.com" className="footer-email">
-            <FaEnvelope /> qiwitech.sanches@gmail.com
+          <a href="mailto:henrique.sanches.oficial@gmail.com" className="footer-email">
+            <FaEnvelope /> henrique.sanches.oficial@gmail.com
           </a>
         </div>
 
