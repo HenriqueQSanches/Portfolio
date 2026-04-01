@@ -9,7 +9,7 @@
 
 **Portfólio interativo desenvolvido com React para showcase de projetos e experiência profissional**
 
-[🌐 Ver Portfólio Online](#) • [📧 Contato](mailto:seu-email@example.com) • [💼 LinkedIn](https://www.linkedin.com/in/henrique-quitti-sanches-developer/)
+[🌐 Ver Portfólio Online](#) • [📧 Contato](mailto:henrique.sanches.oficial@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/henrique-quitti-sanches-developer/)
 
 </div>
 
@@ -256,7 +256,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/henrique-quitti-sanches-developer/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/henriqueqsanches)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:seu-email@example.com)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:henrique.sanches.oficial@gmail.com)
 
 ---
 
