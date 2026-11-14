@@ -93,7 +93,7 @@ const Experiences = () => {
     },
     {
       company: "SCORP Tecnologia",
-      role: "Desenvolvedor Fullstack",
+      role: "Desenvolvedor Fullstack (Estágio)",
       period: "Jan 2023 - Fev 2024 · 1 ano e 2 meses",
       location: "Santo André, SP, Brasil",
       summary:
