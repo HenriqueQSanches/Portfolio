@@ -8,13 +8,29 @@ const Experiences = () => {
   }, []);
 
   const highlights = [
-    { id: 1, label: "Experiência profissional", value: "3+ anos" },
-    { id: 2, label: "Empresas e contratos", value: "5 experiências" },
+    { id: 1, label: "Experiência profissional", value: "Quase 4 anos" },
+    { id: 2, label: "Empresas e contratos", value: "6 experiências" },
     { id: 3, label: "Base atendida (WKL)", value: "200+ clientes" },
-    { id: 4, label: "Projetos de alto impacto", value: "5 destaques" }
+    { id: 4, label: "Atuação atual", value: "SaaS B2B" }
   ];
 
   const experiences = [
+    {
+      company: "Quali IT",
+      role: "Desenvolvedor Fullstack",
+      period: "Abr 2026 - atual",
+      summary:
+        "Alocado em cliente do setor contábil e fiscal (SaaS B2B), atuando em duas frentes: evolução da nova plataforma e sustentação do sistema em produção.",
+      impact: [
+        "Modernização incremental de monólito legado (Node.js e MongoDB) para nova arquitetura em NestJS, Prisma e PostgreSQL, substituindo funcionalidades por partes, sem parar o sistema.",
+        "Migração de grande volume de dados de produção de MongoDB para PostgreSQL, com cargas que podem rodar de novo sem duplicar nem corromper dados.",
+        "Telas completas em Next.js e React, com dashboard, filtros, exportação CSV e download de documentos.",
+        "Sustentação de produção: investigação e correção de chamados de clientes em emissão de nota fiscal eletrônica (NFS-e), cobrança e conciliação bancária, da leitura de logs e banco até a correção validada no fluxo real.",
+        "Adaptações da emissão de NFS-e para a Reforma Tributária (IBS, CBS e NFS-e Nacional) e integrações com cobrança recorrente, Open Finance e CRM.",
+        "Acompanhamento de deploys por pipeline GitLab CI e diagnóstico em Kubernetes pelo Rancher (pods, logs e configuração de ambiente)."
+      ],
+      stack: ["Node.js", "TypeScript", "NestJS", "Prisma", "PostgreSQL", "MongoDB", "Next.js", "React", "Docker", "Kubernetes", "GitLab CI"]
+    },
     {
       company: "Zely",
       role: "Desenvolvedor Fullstack Pl",
@@ -126,7 +142,7 @@ const Experiences = () => {
               </div>
             </header>
 
-            <p className="experience-location">{exp.location}</p>
+            {exp.location && <p className="experience-location">{exp.location}</p>}
             <p className="experience-summary">{exp.summary}</p>
 
             <div className="impact-section">
@@ -153,7 +169,7 @@ const Experiences = () => {
       <div className="recruiter-note">
         <FaUsers />
         <p>
-          Perfil orientado a contratação: experiência fullstack ponta a ponta, atuação em ambiente ágil, integração entre sistemas e foco em manutenção sustentável com Clean Code, SOLID e MVC.
+          Como trabalho: busco a causa raiz de verdade, comparando o caso que funciona com o que falha; só considero uma entrega pronta depois de testar o fluxo real, de ponta a ponta; e documento decisões e investigações para que o conhecimento não se perca.
         </p>
       </div>
     </div>

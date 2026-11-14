@@ -25,6 +25,9 @@ import { FaGithub } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { SiNestjs } from "react-icons/si";
 import { FaDatabase } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import { SiDocker } from "react-icons/si";
+import { SiKubernetes } from "react-icons/si";
 
 const Techinfo = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -138,7 +141,12 @@ const Techinfo = () => {
         sqlserver: { 
             title: "SQL Server", 
             description: "Sistema de gerenciamento de banco de dados da Microsoft.", 
-            experience: "Conhecimento básico de SQL Server, criação de databases e tabelas, queries SQL, stored procedures, e manipulação de dados. Experiência em integração com aplicações .NET e ferramentas Microsoft." 
+            experience: "Conhecimento básico de SQL Server, criação de databases e tabelas, queries SQL, stored procedures, e manipulação de dados. Experiência em integração com aplicações .NET e ferramentas Microsoft."
+        },
+        mongodb: {
+            title: "MongoDB",
+            description: "Banco de dados orientado a documentos.",
+            experience: "Uso diário em sistema legado em produção: consultas e agregações para investigar chamados, correção de dados com backup antes de cada alteração, e migração de grande volume de dados para PostgreSQL com cargas que podem rodar de novo sem duplicar."
         },
         
         // Tools & DevOps
@@ -160,7 +168,17 @@ const Techinfo = () => {
         selenium: { 
             title: "Selenium", 
             description: "Ferramenta para automação de navegadores e testes.", 
-            experience: "Automação de processos web com Selenium, criação de scripts para testes automatizados, web scraping, e interação com páginas dinâmicas. Experiência em integração com Python e otimização de performance de scripts." 
+            experience: "Automação de processos web com Selenium, criação de scripts para testes automatizados, web scraping, e interação com páginas dinâmicas. Experiência em integração com Python e otimização de performance de scripts."
+        },
+        docker: {
+            title: "Docker",
+            description: "Plataforma de contêineres para empacotar e rodar aplicações.",
+            experience: "Imagens e contêineres no dia a dia de desenvolvimento e deploy, com pipelines que constroem a imagem e publicam em cada ambiente."
+        },
+        kubernetes: {
+            title: "Kubernetes (Rancher)",
+            description: "Orquestração de contêineres em produção.",
+            experience: "Acompanhamento de deploys e diagnóstico pelo Rancher: pods, logs e configuração de ambiente para investigar falhas em produção."
         }
     };
 
@@ -209,6 +227,7 @@ const Techinfo = () => {
                         <SiMysql className="techMySQL" onClick={() => handleTechClick(techData.mysql)} />
                         <SiPostgresql className="techPostgreSQL" onClick={() => handleTechClick(techData.postgresql)} />
                         <FaDatabase className="techSQLServer" onClick={() => handleTechClick(techData.sqlserver)} />
+                        <SiMongodb className="techMongoDB" onClick={() => handleTechClick(techData.mongodb)} />
                     </div>
                 </div>
 
@@ -220,6 +239,8 @@ const Techinfo = () => {
                         <FaGitlab className="techGitLab" onClick={() => handleTechClick(techData.gitlab)} />
                         <SiJira className="techJira" onClick={() => handleTechClick(techData.jira)} />
                         <SiSelenium className="techSelenium" onClick={() => handleTechClick(techData.selenium)} />
+                        <SiDocker className="techDocker" onClick={() => handleTechClick(techData.docker)} />
+                        <SiKubernetes className="techKubernetes" onClick={() => handleTechClick(techData.kubernetes)} />
                     </div>
                 </div>
             </div>

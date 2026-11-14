@@ -9,9 +9,8 @@ const Navbar = () => {
     { to: '/', label: 'Início' },
     { to: '/about', label: 'Sobre' },
     { to: '/experiences', label: 'Experiências' },
-    { to: '/tech', label: 'Tecnologias' },
-    { to: '/awards', label: 'Reconhecimentos' },
     { to: '/projects', label: 'Projetos' },
+    { to: '/tech', label: 'Tecnologias' },
     { to: '/services', label: 'Serviços' }
   ];
 

@@ -5,8 +5,10 @@ import { SiWhatsapp } from "react-icons/si";
 import { IoNewspaperSharp } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-
+// Mensagem neutra que já vem escrita quando a pessoa abre o WhatsApp pelo portfólio
+const WHATSAPP = "https://wa.me/5511930022870?text=" + encodeURIComponent("Olá! Vi seu portfólio e gostaria de conversar sobre um projeto.");
 
 const Start = () => {
   useEffect(() => {
@@ -20,24 +22,27 @@ const Start = () => {
         Olá, eu sou <span className="highlight">H</span><span className="highlight-white">en</span><span className="highlight">ri</span><span className="highlight-white">que Sanches!</span><FaReact className='reactIcon' size={40}/>
       </h1>
       <p className="hero-lead">
-        Fullstack Developer · <span className="highlight">Node.js</span>, <span className="highlight">TypeScript</span>, <span className="highlight">React</span>, <span className="highlight">PHP</span> e <span className="highlight">Laravel</span> · plataformas <span className="highlight">SaaS</span>, <span className="highlight">APIs</span> e <span className="highlight">automação</span>.
+        Desenvolvedor Fullstack · <span className="highlight">Node.js</span>, <span className="highlight">TypeScript</span> e <span className="highlight">React</span> · sistemas web em produção, integrações e automação.
       </p>
       <div className="hero-cta">
-        <a className="cta-btn cta-primary" href="https://wa.me/5511930022870?text=Te%20achei%20pelo%20seu%20portfolio%20feito%20em%20ReactJS" target="_blank" rel="noopener noreferrer">
+        <a className="cta-btn cta-primary" href={WHATSAPP} target="_blank" rel="noopener noreferrer">
           Falar no WhatsApp
         </a>
+        <Link className="cta-btn cta-secondary" to="/projects">
+          Ver projetos
+        </Link>
         <a className="cta-btn cta-secondary" href="https://drive.google.com/file/d/1flmT6cRpQckHcH3icYzrmDIQSLzRLHB2/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
           Ver currículo
         </a>
       </div>
       <p>
-        Desenvolvedor Fullstack com <span className="highlight">mais de 3 anos de experiência</span> na criação de sistemas web, plataformas <span className="highlight">SaaS</span> e soluções de <span className="highlight">automação</span> que otimizam processos e reduzem custos operacionais. Atuo do levantamento de requisitos e da arquitetura até a <span className="highlight">implementação e manutenção em produção</span>, com <span className="highlight">TypeScript</span>, <span className="highlight">Node.js</span>, <span className="highlight">React</span>, <span className="highlight">PHP</span>, <span className="highlight">Laravel</span> e <span className="highlight">Python</span>.
+        Sou desenvolvedor fullstack com <span className="highlight">quase 4 anos de experiência</span> construindo e mantendo sistemas web em produção, do banco de dados à interface. Hoje atuo em uma plataforma SaaS B2B do setor contábil e fiscal, entre o sistema legado e a nova arquitetura, com integrações de nota fiscal eletrônica, cobrança recorrente e Open Finance.
       </p>
       <p>
-        Ao longo da trajetória, participei da entrega de sistemas de <span className="highlight">gestão financeira</span>, soluções para <span className="highlight">clínicas</span>, plataformas de atendimento integradas ao <span className="highlight">WhatsApp</span>, automações com <span className="highlight">Python</span> e OCR, e sistemas de validação para eventos de grande porte. Também desenvolvo <span className="highlight">APIs RESTful</span> e integrações, com <span className="highlight">PostgreSQL</span>, <span className="highlight">MySQL</span>, <span className="highlight">Clean Code</span>, <span className="highlight">SOLID</span> e arquitetura <span className="highlight">MVC</span>.
+        Antes disso, desenvolvi uma plataforma de atendimento integrada ao WhatsApp, automações em Python com OCR, um sistema para clínica oftalmológica e validação de ingressos por QR Code para eventos. Por fora, entreguei um <Link className="inline-link" to="/projects">site de reservas com pagamento online</Link> que está no ar recebendo pedidos de verdade.
       </p>
       <p className="quote">
-        "The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge" - <span className='highlight'>Stephen Hawking</span>
+        Só considero uma entrega pronta depois de testar o fluxo real, de ponta a ponta.
         <span className="blink">|</span>
       </p>
       <span className="MeContate">Me Contate!</span>
@@ -50,7 +55,7 @@ const Start = () => {
         </a>
 
         {/* WhatsApp */}
-        <a href="https://wa.me/5511930022870?text=Te%20achei%20pelo%20seu%20portfolio%20feito%20em%20ReactJS" target="_blank" rel="noopener noreferrer">
+        <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
           <SiWhatsapp size={40} className='whatsappIcon' />
         </a>
 

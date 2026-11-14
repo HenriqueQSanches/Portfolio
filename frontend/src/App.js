@@ -1,12 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Start from './pages/Start/Start';
 import About from './pages/About/About';
 import Techinfo from './pages/Techinfo/Techinfo';
-import Awards from './pages/Awards/Awards';
 import Projects from './pages/Projects/Projects';
 import Services from './pages/Services/Services';
 import Experiences from './pages/Experiences/Experiences';
@@ -76,20 +75,6 @@ function App() {
               }
             />
             <Route
-              path="/awards"
-              element={
-                <motion.div
-                  key="awards"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <Awards />
-                </motion.div>
-              }
-            />
-            <Route
               path="/projects"
               element={
                 <motion.div
@@ -117,6 +102,8 @@ function App() {
                 </motion.div>
               }
             />
+            {/* Endereço antigo (/awards) ou digitado errado volta para o início */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </AnimatePresence>
         <Footer />

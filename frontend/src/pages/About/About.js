@@ -28,7 +28,7 @@ const About = () => {
           </div>
           <h3 className="card-title">Experiência Profissional</h3>
           <p className="card-text">
-            Desenvolvedor Fullstack com <span className="highlight">mais de 3 anos de experiência</span> em sistemas web, plataformas <span className="highlight">SaaS</span> e <span className="highlight">automação</span> para diferentes segmentos. Já entreguei soluções de <span className="highlight">gestão financeira</span>, aplicações para <span className="highlight">clínicas</span>, plataformas de atendimento com <span className="highlight">WhatsApp</span>, automações administrativas e sistemas de validação para eventos — sempre com foco em resultado e operação estável.
+            Desenvolvedor Fullstack com <span className="highlight">quase 4 anos de experiência</span> em sistemas web, plataformas <span className="highlight">SaaS</span> e automação para diferentes segmentos. Já entreguei soluções de gestão financeira, aplicações para clínicas, plataformas de atendimento com WhatsApp, automações administrativas e sistemas de validação para eventos, sempre com foco em resultado e operação estável.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ const About = () => {
           </div>
           <h3 className="card-title">Metodologias & Práticas</h3>
           <p className="card-text">
-            Trabalho com <span className="highlight">metodologias ágeis</span>, code reviews e boas práticas de engenharia, com <span className="highlight">Clean Code</span>, <span className="highlight">SOLID</span> e arquitetura <span className="highlight">MVC</span>. Costumo conduzir projetos do conceito e requisitos até deploy e manutenção, priorizando código escalável e fácil de evoluir.
+            Trabalho com <span className="highlight">metodologias ágeis</span> e code review. Busco a causa raiz de verdade, comparando o caso que funciona com o que falha, só considero uma entrega pronta depois de testar o fluxo real e documento as decisões para que o conhecimento não se perca. Costumo conduzir projetos do levantamento de requisitos até o deploy e a manutenção.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ const About = () => {
           </div>
           <h3 className="card-title">Além do Código</h3>
           <p className="card-text">
-            Fascinado por <span className="highlight">livros de fantasia</span>, <span className="highlight">astronomia</span>, <span className="highlight">astrofísica</span> e o <span className="highlight">estudo de linguagens de programação</span>. Adoro <span className="highlight">jogos</span>, <span className="highlight">filmes</span> e <span className="highlight">séries</span> — sempre buscando inspiração em histórias e descobertas.
+            Fascinado por <span className="highlight">livros de fantasia</span>, <span className="highlight">astronomia</span>, <span className="highlight">astrofísica</span> e o <span className="highlight">estudo de linguagens de programação</span>. Adoro <span className="highlight">jogos</span>, <span className="highlight">filmes</span> e <span className="highlight">séries</span>, sempre buscando inspiração em histórias e descobertas.
           </p>
         </div>
       </div>

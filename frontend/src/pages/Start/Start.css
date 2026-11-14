@@ -198,3 +198,14 @@
     transform: scale(0.9);
   }
 }
+
+/* Link no meio do texto (ex.: site de reservas) */
+.start-container .inline-link {
+  color: #CFA2E0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.start-container .inline-link:hover {
+  color: #fff;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import './Projects.css';
-import { FaWhatsapp, FaRobot, FaChartLine, FaQrcode, FaHospital, FaTrophy, FaCode, FaDatabase } from "react-icons/fa";
+import { FaWhatsapp, FaRobot, FaChartLine, FaQrcode, FaHospital, FaTrophy, FaCode, FaDatabase, FaCalendarCheck, FaExternalLinkAlt } from "react-icons/fa";
 import { MdOutlineManageAccounts } from "react-icons/md";
 
 const Projects = () => {
@@ -9,6 +9,32 @@ const Projects = () => {
   }, []);
 
   const projects = [
+    {
+      // Projeto real, no ar, com autorização do dono para o portfólio (nov/2026)
+      id: 9,
+      featured: true,
+      icon: <FaCalendarCheck />,
+      title: "Site de Reservas com Pagamento Online",
+      category: "Projeto real, no ar",
+      company: "Nathalia Perissato Brigaderia",
+      description: "Site de reservas para a campanha de Natal de uma brigaderia artesanal. O cliente escolhe os produtos, a data de entrega ou de retirada e paga o sinal online. Por trás, um painel onde o dono acompanha os pedidos e controla datas, limites e cupons.",
+      technologies: ["Next.js", "React", "TypeScript", "PostgreSQL (Supabase)", "Mercado Pago", "Cloudflare"],
+      results: [
+        "No ar desde novembro de 2026, com pagamentos reais por Pix e cartão",
+        "Limite de vagas por data e por produto, sem vender além do limite mesmo com pedidos ao mesmo tempo",
+        "Pagamento confirmado sozinho pelo aviso automático do Mercado Pago",
+        "Painel com pedidos, limites por dia, datas, cupons de desconto e planilha"
+      ],
+      link: "https://reservas-natal.nathaliaperissato.workers.dev",
+      images: [
+        { src: "/images/projetos/brigaderia-vitrine-desktop.png", alt: "Vitrine do site no computador, com as datas de entrega e retirada e os panetones" },
+        { src: "/images/projetos/brigaderia-vitrine-celular.png", alt: "Vitrine no celular" },
+        { src: "/images/projetos/brigaderia-produto-celular.png", alt: "Produto com foto, descrição e preço no celular" },
+        { src: "/images/projetos/brigaderia-pagamento-celular.png", alt: "Resumo com cupom de desconto e escolha entre sinal, metade ou valor total" }
+      ],
+      confidential: false,
+      period: "2026"
+    },
     {
       id: 1,
       icon: <FaWhatsapp />,
@@ -34,8 +60,7 @@ const Projects = () => {
       technologies: ["Python", "OCR", "Excel", "Pandas"],
       results: [
         "Atende mais de 200 clientes",
-        "70% de redução no tempo de processamento",
-        "Automação completa de tarefas manuais"
+        "Leitura de códigos de barras e geração de planilhas sem trabalho manual"
       ],
       confidential: true,
       period: "2025"
@@ -66,9 +91,8 @@ const Projects = () => {
       technologies: ["PHP", "ReactJS", "MySQL", "DAO Pattern"],
       results: [
         "Dashboards interativos",
-        "Visualização em tempo real",
-        "Análise financeira completa",
-        "Otimização de investimentos"
+        "Receitas, despesas e lucros em tempo real",
+        "Análise financeira completa"
       ],
       confidential: false,
       period: "2024"
@@ -99,9 +123,8 @@ const Projects = () => {
       description: "App mobile de QR Code para evento da série Sintonia da Netflix. Validação instantânea com autenticação Google.",
       technologies: ["PHP Slim", "ReactJS", "Google API", "MySQL"],
       results: [
-        "Redução drástica em filas",
-        "Validação instantânea de ingressos",
-        "Alta satisfação do público",
+        "Validação instantânea de ingressos na entrada",
+        "Leitura de QR Code pelo celular",
         "Autenticação Google integrada"
       ],
       confidential: false,
@@ -117,9 +140,7 @@ const Projects = () => {
       technologies: ["Laravel", "Node.js", "TypeScript", "MySQL"],
       results: [
         "Múltiplas integrações de API",
-        "Entrega eficiente de prêmios",
-        "Alta confiabilidade em eventos",
-        "Escalabilidade garantida"
+        "Entrega de prêmios em eventos de grande porte"
       ],
       confidential: false,
       period: "2024"
@@ -133,9 +154,7 @@ const Projects = () => {
       technologies: ["Python", "SQLite", "PyInstaller"],
       results: [
         "Soluções offline independentes",
-        "Alta taxa de adesão",
-        "Facilidade de distribuição",
-        "Performance local otimizada"
+        "Distribuição simples em um único executável"
       ],
       confidential: false,
       period: "2024"
@@ -158,7 +177,24 @@ const Projects = () => {
 
       <div className="projects-grid">
         {projects.map((project) => (
-          <div key={project.id} className="project-card">
+          <div key={project.id} className={`project-card${project.featured ? " featured" : ""}`}>
+            {/* Prints do projeto: o primeiro (computador) em cima, os de celular lado a lado. Clicar abre em tamanho real. */}
+            {project.images && (
+              <div className="project-gallery">
+                {project.images.map((img, index) => (
+                  <a
+                    key={img.src}
+                    href={img.src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`gallery-item${index === 0 ? " gallery-main" : ""}`}
+                  >
+                    <img src={img.src} alt={img.alt} loading="lazy" />
+                  </a>
+                ))}
+              </div>
+            )}
+
             <div className="project-header">
               <div className="project-icon-wrapper">
                 <div className="project-icon">
@@ -201,6 +237,11 @@ const Projects = () => {
 
             <div className="project-footer">
               <span className="project-period">{project.period}</span>
+              {project.link && (
+                <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">
+                  Ver site no ar <FaExternalLinkAlt />
+                </a>
+              )}
             </div>
           </div>
         ))}
