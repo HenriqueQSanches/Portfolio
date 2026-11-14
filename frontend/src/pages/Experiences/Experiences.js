@@ -17,7 +17,7 @@ const Experiences = () => {
   const experiences = [
     {
       company: "Quali IT",
-      role: "Desenvolvedor Fullstack",
+      role: "Desenvolvedor Fullstack (PJ)",
       period: "Abr 2026 - atual",
       summary:
         "Alocado em cliente do setor contábil e fiscal (SaaS B2B), atuando em duas frentes: evolução da nova plataforma e sustentação do sistema em produção.",
@@ -33,7 +33,7 @@ const Experiences = () => {
     },
     {
       company: "Zely",
-      role: "Desenvolvedor Fullstack Pl",
+      role: "Desenvolvedor Fullstack Pl (PJ)",
       period: "Abr 2025 - Out 2025 · 7 meses",
       location: "São Paulo, Brasil",
       summary:
@@ -78,7 +78,7 @@ const Experiences = () => {
     },
     {
       company: "cPortal",
-      role: "Desenvolvedor Fullstack",
+      role: "Desenvolvedor Fullstack (PJ)",
       period: "Ago 2024 - Fev 2025 · 7 meses",
       location: "São Bernardo do Campo, SP, Brasil",
       summary:
