@@ -34,7 +34,7 @@ const Experiences = () => {
     {
       company: "Zely",
       role: "Desenvolvedor Fullstack Pl",
-      period: "Abr 2025 - Mar 2026 · 1 ano",
+      period: "Abr 2025 - Out 2025 · 7 meses",
       location: "São Paulo, Brasil",
       summary:
         "Evolução de plataforma de atendimento integrada ao WhatsApp, com foco em automação de suporte, gestão de tickets e comunicação multicanal.",
