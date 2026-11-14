@@ -65,7 +65,7 @@ const Experiences = () => {
       company: "Workana",
       role: "Desenvolvedor Fullstack",
       period: "Jan 2024 - Mar 2025 · 1 ano e 3 meses",
-      location: "Santo André, SP, Brasil",
+      location: "Remoto",
       summary:
         "Atuação como desenvolvedor independente no ciclo completo de sistemas web, automações e integrações para diferentes segmentos.",
       impact: [
